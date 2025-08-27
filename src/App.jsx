@@ -1,5 +1,12 @@
 import "./App.css";
-import { FormControl, InputGroup,Container,Button,Card,Row,} from "react-bootstrap";
+import {
+  FormControl,
+  InputGroup,
+  Container,
+  Button,
+  Card,
+  Row,
+} from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
@@ -64,8 +71,19 @@ function App() {
 
   return (
     <>
+      {/* 🔹 New Header Section */}
+      <header style={{ textAlign: "center", margin: "40px 0", color: "white" }}>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "10px" }}>
+          Spotify Album Finder
+        </h1>
+        <p style={{ fontSize: "1.2rem", color: "#b3b3b3" }}>
+          Discover your favorite albums instantly
+        </p>
+      </header>
+
+      {/* Existing Search Bar */}
       <Container>
-        <InputGroup>
+        <InputGroup className="justify-content-center">
           <FormControl
             placeholder="Search For Artist"
             type="input"
@@ -90,6 +108,7 @@ function App() {
         </InputGroup>
       </Container>
 
+      {/* Albums Section */}
       <Container>
         <Row
           style={{
@@ -131,11 +150,7 @@ function App() {
                   >
                     {album.name}
                   </Card.Title>
-                  <Card.Text
-                    style={{
-                      color: "black",
-                    }}
-                  >
+                  <Card.Text style={{ color: "black" }}>
                     Release Date: <br /> {album.release_date}
                   </Card.Text>
                   <Button
