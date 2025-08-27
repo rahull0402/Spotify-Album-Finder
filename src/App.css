@@ -1,10 +1,32 @@
+/* Root container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #121212; /* Dark background like Spotify */
+  min-height: 100vh;
 }
 
+/* ===== Header Section ===== */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;      /* White headline */
+  margin-bottom: 0.5rem;
+}
+
+.app-header .tagline {
+  font-size: 1.25rem;
+  color: #ffcc00;      /* Yellow tagline */
+  font-weight: 500;
+}
+
+/* ===== Logo (default Vite/React demo styles) ===== */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -33,10 +55,14 @@
   }
 }
 
+/* ===== Card Section ===== */
 .card {
   padding: 2em;
+  background-color: #1e1e1e;
+  border-radius: 10px;
 }
 
+/* Default small text style */
 .read-the-docs {
   color: #888;
 }
